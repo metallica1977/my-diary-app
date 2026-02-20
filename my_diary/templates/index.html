@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>دفتر خاطرات من</title>
+    <style>
+        body { font-family: sans-serif; direction: rtl; text-align: center; background-color: #f9f9f9; }
+        .note { background: white; margin: 10px auto; padding: 10px; width: 60%; border-radius: 10px; box-shadow: 0 0 5px #aaa; }
+        a { text-decoration: none; color: blue; }
+        a.button { display: inline-block; margin-top: 15px; padding: 8px 16px; background: #007bff; color: white; border-radius: 5px; }
+        a.button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>📔 دفتر خاطرات روزانه</h1>
+    <a href="/add" class="button">✍️ افزودن یادداشت جدید</a>
+
+    {% if notes %}
+        {% for note in notes %}
+            <div class="note">{{ note }}</div>
+        {% endfor %}
+    {% else %}
+        <p>هنوز هیچ یادداشتی ننوشتی!</p>
+    {% endif %}
+</body>
+</html>
