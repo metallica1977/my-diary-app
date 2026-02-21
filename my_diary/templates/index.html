@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>دفترچه خاطرات من</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <button type="submit" class="btn btn-purple text-white w-100"></button>
     <style>
        body {
         background: linear-gradient(135deg, #1a002b, #2d004d, #3b0764);
@@ -31,6 +31,7 @@
         background: rgba(88, 28, 135, 0.6);
         border-radius: 15px;
         border-right: 5px solid #a855f7;
+        color: #ffffff !important;
         opacity: 0;
         transform: translateY(20px);
         animation: fadeUp 0.6s ease forwards;
@@ -48,15 +49,17 @@
         }
     }
 
-    .btn-purple {
-        background: linear-gradient(45deg, #7e22ce, #a855f7);
-        border: none;
-        color: white;
-        border-radius: 10px;
+   .btn-purple {
+    background: linear-gradient(45deg, #7e22ce, #a855f7);
+    border: none;
+    color: #ffffff !important;   /* 👈 این مهمه */
+    border-radius: 10px;
+    font-weight: 500;
     }
 
-    .btn-purple:hover {
-        background: linear-gradient(45deg, #6b21a8, #9333ea);
+   .btn-purple:hover {
+    background: linear-gradient(45deg, #6b21a8, #9333ea);
+    color: #ffffff !important;   /* 👈 برای حالت hover هم */
     }
 
     textarea {
