@@ -1,6 +1,7 @@
 import time
 from flask import Flask, render_template, request, redirect
 import json, os
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -38,9 +39,10 @@ def add_note():
         notes = json.load(f)
 
     new_note = {
-        "id": int(time.time() * 1000),
-        "text": note_text
-    }
+    "id": int(time.time() * 1000),
+    "text": note_text,
+    "date": datetime.now().strftime("%Y/%m/%d - %H:%M")
+               }
 
     notes.append(new_note)
 
